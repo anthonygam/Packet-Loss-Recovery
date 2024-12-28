@@ -7,9 +7,13 @@ Brushing up on my knowledge of TCP by implementing a simplified version of the p
 Begin by splitting data into chunks. Each chunk gets an index called a sequence number.
 
 ```
-The Transm ission Con trol Proto col (TCP)  is one of  the main p rotocols o f the Inte rnet proto col suite.
-|--------| |--------| |--------| |--------| |--------| |--------| |--------| |--------| |--------| |--------|
-    00         01         02         03         04         05         06         07         08         09
+The Transm ission Con trol Proto col (TCP)  is one of  
+|--------| |--------| |--------| |--------| |--------| 
+    00         01         02         03         04    
+
+the main p rotocols o f the Inte rnet proto col suite.
+|--------| |--------| |--------| |--------| |--------|
+    05         06         07         08         09
 ```
 
 Implementation is half-duplex and one-way (client downloads from server only) without the three-way handshake in the beginning.
@@ -65,7 +69,7 @@ Here is how the server logs appear with simulated packet loss of 50% on the clie
 [INFO] Sent final packet.
 ```
 
-When the client receives the final packet, they know they have all pieces of the file, so they are able to print it chunk by chunk as follows
+When the client receives the final packet, they know they have all pieces of the file, so they are able to print it chunk by chunk as follows (100 characters per chunk)
 
 ```
 ['The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.',
@@ -106,4 +110,5 @@ Both the server and client make use of some common utility functions. The main p
 ## References
 
 [https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server](https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server).
+
 [https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-client](https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-client)
