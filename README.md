@@ -2,6 +2,8 @@
 
 Brushing up on my knowledge of TCP by implementing a simplified version of the protocol using UDP.
 
+Implementation is half-duplex and one-way (client downloads from server only) without the three-way handshake in the beginning.
+
 ## What it does
 
 Begin by splitting data into chunks. Each chunk gets an index called a sequence number.
@@ -15,8 +17,6 @@ the main p rotocols o f the Inte rnet proto col suite.
 |--------| |--------| |--------| |--------| |--------|
     05         06         07         08         09
 ```
-
-Implementation is half-duplex and one-way (client downloads from server only) without the three-way handshake in the beginning.
 
 Here is how the server logs appear with simulated packet loss of 50% on the client side
 
@@ -72,13 +72,13 @@ Here is how the server logs appear with simulated packet loss of 50% on the clie
 When the client receives the final packet, they know they have all pieces of the file, so they are able to print it chunk by chunk as follows (100 characters per chunk)
 
 ```
-['The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.',
- ' It originated in the initial network implementation in which it complemented the Internet Protocol ',
- '(IP). Therefore, the entire suite is commonly referred to as TCP/IP. TCP provides reliable, ordered,',
- ' and error-checked delivery of a stream of octets (bytes) between applications running on hosts comm',
- 'unicating via an IP network. Major internet applications such as the World Wide Web, email, remote a',
- 'dministration, and file transfer rely on TCP, which is part of the transport layer of the TCP/IP sui',
- 'te. SSL/TLS often run on top of TCP.']
+The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.
+It originated in the initial network implementation in which it complemented the Internet Protocol
+(IP). Therefore, the entire suite is commonly referred to as TCP/IP. TCP provides reliable, ordered,
+and error-checked delivery of a stream of octets (bytes) between applications running on hosts comm
+unicating via an IP network. Major internet applications such as the World Wide Web, email, remote a
+dministration, and file transfer rely on TCP, which is part of the transport layer of the TCP/IP sui
+te. SSL/TLS often run on top of TCP.
 ```
 
 ## How the server works
