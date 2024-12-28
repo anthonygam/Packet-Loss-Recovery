@@ -109,6 +109,6 @@ Both the server and client make use of some common utility functions. The main p
 
 ## References
 
-[https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server](https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server).
+[https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server](https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server)
 
 [https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-client](https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-client)
